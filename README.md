@@ -1,2 +1,2 @@
-# OpenClassrooms-DA-Python-Projet-3
+# OpenClassrooms DA Python Projet_3
 Projet 3: création d'un labyrinthe en Python
