@@ -13,10 +13,9 @@ class Char:
 
        
 		
-	def movement(self)
+    def movement(self)
 
-
-    	if direction == "up"
+		if direction == "up"
     		position_y = position_y - 1
     		self.y = self.position_y * sprite_size
          
