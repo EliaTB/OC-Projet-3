@@ -6,20 +6,20 @@ from maze import *
 class Char:
     
     def __init__(self,)
-		self.position_x = 0
-		self.position_y = 0
-		self.x = 0
-		self.y = 0
+        self.position_x = 0
+        self.position_y = 0
+        self.x = 0
+        self.y = 0
 
        
 		
     def movement(self)
 
         if direction == "up"
-		    position_y = position_y - 1
-			self.y = self.position_y * sprite_size
+            position_y = position_y - 1
+            self.y = self.position_y * sprite_size
          
-		if direction == "down"
+       if direction == "down"
             position_y = position_y + 1
             self.y = self.position_y * spirte_size
            
@@ -28,8 +28,8 @@ class Char:
             self.x = self.position_x * sprite_size    
 
     	if direction == "left"
-    		position_x = position_x -1
-    		self.x = self.position_x * sprite_size
+            position_x = position_x -1
+            self.x = self.position_x * sprite_size
 
 
     def movementEvent(self)
