@@ -30,7 +30,11 @@ class Char:
     	if direction == "left"
             position_x = position_x -1
             self.x = self.position_x * sprite_size
-
+	
+#    def wall_check(self)
+#       if structure_level[position_y][position_x] == "X" :
+#          return false:
+	
 
     def movementEvent(self)
 
