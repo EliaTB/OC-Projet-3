@@ -37,14 +37,14 @@ class Char:
 
     	if event.type == KEYDOWN:
             if event.key == K_UP:
-                macgyver.movement("up")
+                char.movement("up")
     	if event.type == KEYDOWN:
             if event.key == K_DOWN:
-                macgyver.movement("down")
+                char.movement("down")
         if event.type == KEYDOWN:
             if event.key == K_RIGHT:
-                macgyver.movement("right")        
+                char.movement("right")        
         if event.type == KEYDOWN:
             if event.key == K_LEFT:
-                macgyver.movement("left")
+                char.movement("left")
         
