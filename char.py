@@ -15,17 +15,17 @@ class Char:
 		
     def movement(self)
 
-		if direction == "up"
-    		position_y = position_y - 1
-    		self.y = self.position_y * sprite_size
+        if direction == "up"
+		    position_y = position_y - 1
+			self.y = self.position_y * sprite_size
          
 		if direction == "down"
-			position_y = position_y + 1
-			self.y = self.position_y * spirte_size
+            position_y = position_y + 1
+            self.y = self.position_y * spirte_size
            
-		if direction == "right"
-			position_x = position_x + 1
-			self.x = self.position_x * sprite_size    
+        if direction == "right"
+            position_x = position_x + 1
+            self.x = self.position_x * sprite_size    
 
     	if direction == "left"
     		position_x = position_x -1
