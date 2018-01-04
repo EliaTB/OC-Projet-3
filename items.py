@@ -23,7 +23,7 @@ class Items:
         		self.y = position_y * sprite_size
         		self.items_nb = self.items_nb + 1
         	else: 
-                pass
+                    pass
 
     
     
