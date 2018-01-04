@@ -1,6 +1,8 @@
 import random
 from maze import *
 
+sprite_nb = 15
+
 class Items:
 
     def __init__(self,):
@@ -21,7 +23,7 @@ class Items:
         		self.y = position_y * sprite_size
         		self.items_nb = self.items_nb + 1
         	else: 
-        		pass
+                pass
 
     
     
