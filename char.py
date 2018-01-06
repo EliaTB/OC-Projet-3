@@ -36,19 +36,19 @@ class Char:
 #          return false:
 	
 
-    def movementEvent(self)
+ #   def movement_event(self)
 
 
-    	if event.type == KEYDOWN:
-            if event.key == K_UP:
-                char.movement("up")
-    	if event.type == KEYDOWN:
-            if event.key == K_DOWN:
-                char.movement("down")
-        if event.type == KEYDOWN:
-            if event.key == K_RIGHT:
-                char.movement("right")        
-        if event.type == KEYDOWN:
-            if event.key == K_LEFT:
-                char.movement("left")
+ #   	if event.type == KEYDOWN:
+ #           if event.key == K_UP:
+ #               char.movement("up")
+ #   	if event.type == KEYDOWN:
+ #           if event.key == K_DOWN:
+ #               char.movement("down")
+ #       if event.type == KEYDOWN:
+ #           if event.key == K_RIGHT:
+ #               char.movement("right")        
+ #       if event.type == KEYDOWN:
+ #           if event.key == K_LEFT:
+ #               char.movement("left")
         
