@@ -23,7 +23,6 @@ class Game:
     	pygame.quit()
 
     def movement_event(char)
-
         for event in pygame.event.get(pygame.KEYDOWN):
             if event.key == K_UP:
                 char.movement("up")
