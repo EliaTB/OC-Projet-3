@@ -4,12 +4,9 @@ from maze import Maze
 from char import Char
 
 
-
-
 class Game:
 
-
-	def main(self):
+    def main(self):
         self.WIDTH = sprite_nb * sprite_size
         self.HEIGHT = sprite_nb * sprite_size
     	self.size = WIDTH, HEIGHT
@@ -17,15 +14,13 @@ class Game:
     	game_start()
   
 
-	def game_start():
+    def game_start():
     	running = True
     	while running:
-        	for event in pygame.event.get():
+            for event in pygame.event.get():
             	if event.type == QUIT:
-                running = False
-                
+                running = False      
     	pygame.quit()
-
 
     def movement_event(char)
 
