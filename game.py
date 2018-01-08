@@ -1,30 +1,41 @@
 import pygame
 from pygame.locals import *
-from maze import *
-from char import *
+from maze import Maze
+from char import Char
 
 
 
-WIDTH = sprite_nb * sprite_size
-HEIGHT = sprite_nb * sprite_size
 
-# WHITE = (255, 255, 255)
-# SQUARE = pygame.draw.rect(screen, WHITE, (x, y, 10, 10))
+class Game:
 
 
+	def main(self):
+        self.WIDTH = sprite_nb * sprite_size
+        self.HEIGHT = sprite_nb * sprite_size
+    	self.size = WIDTH, HEIGHT
+    	self.screen = pygame.display.set_mode((size))
+    	game_start()
+  
 
-def main():
-    pygame.init()
-    screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    mainloop()
-    
-def mainloop():
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == QUIT:
+	def game_start():
+    	running = True
+    	while running:
+        	for event in pygame.event.get():
+            	if event.type == QUIT:
                 running = False
                 
-    pygame.quit()
+    	pygame.quit()
 
-main()
+
+    def movement_event(char)
+
+        for event in pygame.event.get(pygame.KEYDOWN):
+            if event.key == K_UP:
+                char.movement("up")
+            if event.key == K_DOWN:
+                char.movement("down")
+            if event.key == K_RIGHT:
+                char.movement("right")        
+            if event.key == K_LEFT:
+                char.movement("left")
+        

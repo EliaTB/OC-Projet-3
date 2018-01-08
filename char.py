@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-from maze import *
+from maze import Maze
 
 
 class Char:
@@ -35,20 +35,3 @@ class Char:
 #       if structure_level[position_y][position_x] == "X" :
 #          return false:
 	
-
- #   def movement_event(self)
-
-
- #   	if event.type == KEYDOWN:
- #           if event.key == K_UP:
- #               char.movement("up")
- #   	if event.type == KEYDOWN:
- #           if event.key == K_DOWN:
- #               char.movement("down")
- #       if event.type == KEYDOWN:
- #           if event.key == K_RIGHT:
- #               char.movement("right")        
- #       if event.type == KEYDOWN:
- #           if event.key == K_LEFT:
- #               char.movement("left")
-        
