@@ -26,10 +26,10 @@ class Game:
         for event in pygame.event.get(pygame.KEYDOWN):
             if event.key == K_UP:
                 char.movement("up")
-            if event.key == K_DOWN:
+            elif event.key == K_DOWN:
                 char.movement("down")
-            if event.key == K_RIGHT:
+            elif event.key == K_RIGHT:
                 char.movement("right")        
-            if event.key == K_LEFT:
+            elif event.key == K_LEFT:
                 char.movement("left")
         
