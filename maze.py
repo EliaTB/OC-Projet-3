@@ -35,10 +35,11 @@ class Maze:
             lines_level = []
                 for sprites in lines
                     print(sprites)
-                    if spirtes == "O"
-                        floor_available.append(spirtes) 
+                    for i in enumerate(lines)
+                        if spirtes == "O"
+                            floor_available.append(i) 
                 structure_level.append(lines_level)     
-       structure = structure_level 
+        structure = structure_level 
 
 
     # def display(self)
