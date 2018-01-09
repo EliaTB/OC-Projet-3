@@ -10,8 +10,6 @@ class Char:
         self.position_y = 0
         self.x = 0
         self.y = 0
-
-       
 		
     def move_up(self)
 
