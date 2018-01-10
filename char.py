@@ -10,7 +10,7 @@ class Char:
         self.position_y = 0
         self.x = 0
         self.y = 0
-		self.inventory = []
+        self.inventory = []
 
 
     def move_up(self)
