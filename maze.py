@@ -1,56 +1,48 @@
 import random
 import pygame
-
-
-# maze = [[X,S,X,X,X,X,X,X,X,X,X,X,X,X],
-#         [X,O,X,X,X,X,X,X,X,X,X,X,X,X],
-#         [X,O,X,X,X,X,X,X,X,X,X,X,X,X],
-#         [X,O,O,O,O,O,O,O,O,O,O,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,O,X,X],
-#         [X,X,X,X,X,X,X,X,X,X,X,E,X,X]]
+from game import Game
 
 
 class Maze:
 
+
     def __init__(self, level):
         self.level = level
-        self.spirtes_x = 15 
-        self.spirtes_y = 15
         self.structure = 0
+
         
     def generate(self):
+
         with open(self.level, "r") as level:
             structure_level = []
 
-        for lines in level:
+        for line in level:
             print(lines)
             lines_level = []
-                for sprites in lines
-                    print(sprites)
-                    for i in enumerate(lines)
+                for sprite in line:
+                    print(sprite)
+                    for i in enumerate(line)
                         if spirtes == "O"
                             floor_available.append(i) 
                 structure_level.append(lines_level)     
-        structure = structure_level 
+        self.structure = structure_level 
 
 
-    # def display(self)
+     def display(self, screen)
 
-    #     for lines in strucutre:
-    #         for sprites in lines:
-    #             if sprites == "X"
-    #                  draw wall_image
-    #             elif spirtes == "O"
-    #                 draw floor_image
-               
+        spirtes_x = 0
+        for line in self.strucutre:
+            spirtes_y = 0
+            for sprites in line:
+                x = spirtes_x * sprite_size
+                y = spirtes_y * sprite_size
+                if sprite == "x":
+                    screen.blit(wall_image, (x,y))
+                elif spirtes == "O"
+                    screen.blit(floor_image, (x, y))
+            spirtes_y = spirtes_y + 1
+        spirtes_x = spirtes_x + 1    
+                    
         
                     
     
