@@ -37,9 +37,9 @@ class Maze:
                 x = spirtes_x * sprite_size
                 y = spirtes_y * sprite_size
                 if sprite == "x":
-                    screen.blit(wall_image, (x,y))
+                    screen.blit("wall_image", (x,y))
                 elif spirtes == "O"
-                    screen.blit(floor_image, (x, y))
+                    screen.blit("floor_image", (x, y))
             spirtes_y = spirtes_y + 1
         spirtes_x = spirtes_x + 1    
                     

@@ -10,12 +10,14 @@ class Char:
         self.position_y = 0
         self.x = 0
         self.y = 0
-		
+		self.inventory = []
+
+
     def move_up(self)
 
         if direction == "up" :
             if self.position_y > 0 :
-                position_y = position_y - 1
+                position_y -= 1
                 self.y = self.position_y * sprite_size
                 if structure_level[position_y][position_x] == "X" :
                     pass
@@ -24,7 +26,7 @@ class Char:
          
        if direction == "down" :
             if self.position_y < sprite_nb :       
-                position_y = position_y + 1
+                position_y += 1
                 self.y = self.position_y * spirte_size
                 if structure_level[position_y][position_x] == "X" :
                     pass
@@ -33,7 +35,7 @@ class Char:
            
         if direction == "right" :
             if self.position_x > 0 :
-                position_x = position_x + 1
+                position_x += 1
                 self.x = self.position_x * sprite_size
                 if structure_level[position_y][position_x] == "X" :
                     pass    
@@ -42,8 +44,12 @@ class Char:
     
     	if direction == "left" :
             if self.position_x < sprite_nb :
-                position_x = position_x -1
+                position_x -= 1
                 self.x = self.position_x * sprite_size
                 if structure_level[position_y][position_x] == "X" :
                     pass
+
+    def item_counter(self, item)
+    
+        self.inventory.append(item)
 	
