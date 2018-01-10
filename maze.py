@@ -5,7 +5,6 @@ from game import Game
 
 class Maze:
 
-
     def __init__(self, level):
         self.level = level
         self.structure = 0
@@ -15,7 +14,6 @@ class Maze:
 
         with open(self.level, "r") as level:
             structure_level = []
-
         for line in level:
             print(lines)
             lines_level = []
