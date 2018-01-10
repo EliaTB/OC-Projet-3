@@ -6,12 +6,15 @@ from char import Char
 
 class Game:
 
-    def main(self):
+
+    def __init__(self):
+        self.sprite_nb = 15
+        self.sprite_size = 50
         self.WIDTH = sprite_nb * sprite_size
         self.HEIGHT = sprite_nb * sprite_size
     	self.size = WIDTH, HEIGHT
     	self.screen = pygame.display.set_mode((size))
-    	game_start()
+        game_start()
   
 
     def game_start():
