@@ -6,14 +6,12 @@ from char import Char
 
 class Game:
 
-
     def __init__(self):
         self.sprite_nb = 15
         self.sprite_size = 50
         self.WIDTH = sprite_nb * sprite_size
         self.HEIGHT = sprite_nb * sprite_size
-    	self.size = WIDTH, HEIGHT
-    	self.screen = pygame.display.set_mode((size))
+    	self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         game_start()
   
 
@@ -25,6 +23,7 @@ class Game:
                 running = False      
     	pygame.quit()
 
+        
     def movement_event(char)
         for event in pygame.event.get(pygame.KEYDOWN):
             if event.key == K_UP:
