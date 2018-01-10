@@ -42,8 +42,8 @@ class Char:
     
     	if direction == "left" :
             if self.position_x < sprite_nb :
-            position_x = position_x -1
-            self.x = self.position_x * sprite_size
-            if structure_level[position_y][position_x] == "X" :
-                pass
+                position_x = position_x -1
+                self.x = self.position_x * sprite_size
+                if structure_level[position_y][position_x] == "X" :
+                    pass
 	
