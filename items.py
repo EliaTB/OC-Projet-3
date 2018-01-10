@@ -15,8 +15,8 @@ class Items:
     def add_item(self) :
         
         while self.items_nb < 4
-        	self.x = random.randint(1, floor_available)
-        	self.y = random.randint(1, floor_available)
+        	self.x = random.randint(1, floor_available - 1)
+        	self.y = random.randint(1, floor_available - 1)
             self.items_nb += 1
 
         self.position_x = self.x * sprite_size
