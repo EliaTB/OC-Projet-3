@@ -1,7 +1,7 @@
 import random
 from maze import maze
 
-sprite_nb = 15
+
 
 class Items:
 
@@ -11,10 +11,9 @@ class Items:
         self.position_y = 0
         self.x = 0
         self.y = 0
-        self.items_nb = 0
 
     def add_item(self) :
-
+        
         while self.items_nb < 4
         	self.x = random.randint(1, floor_available)
         	self.y = random.randint(1, floor_available)
