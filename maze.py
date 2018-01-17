@@ -14,12 +14,11 @@ class Maze:
 
         with open(self.level, "r") as level:
             structure_level = []
-        for line in level:
+        for i,line in enumerate(level):
             print(lines)
             lines_level = []
-                for sprite in line:
+                for j,sprite in enumerate(line):
                     print(sprite)
-                    for i in enumerate(line)
                         if spirtes == "O"
                             floor_available.append(i) 
                 structure_level.append(lines_level)     
