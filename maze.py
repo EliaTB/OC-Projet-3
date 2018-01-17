@@ -1,44 +1,54 @@
-import random
+import random 
 import pygame
-from game import Game
+from pygame.locals import *
+from data import *
 
 
 class Maze:
 
-    def __init__(self, level):
-        self.level = level
-        self.structure = 0
+    def __init__(self, level_file):
+        self.level_file = level_file
+        self.structure = None
 
         
     def generate(self):
 
-        with open(self.level, "r") as level:
+        with open(self.level_file) as level_file:
             structure_level = []
-        for i,line in enumerate(level):
-            print(lines)
-            lines_level = []
-                for j,sprite in enumerate(line):
-                    print(sprite)
-                        if spirtes == "O"
-                            floor_available.append(i) 
-                structure_level.append(lines_level)     
-        self.structure = structure_level 
+            for line in level_file:
+                line_level = []
+                for sprite in line:
+#                   if sprite == "O":
+#                       floor_available.append(i)
+                    if sprite != "\n":
+                        line_level.append(sprite)
+                structure_level.append(line_level)     
+            self.structure = structure_level 
 
 
-     def display(self, screen)
+    def display(self, screen):
 
-        spirtes_x = 0
-        for line in self.strucutre:
-            spirtes_y = 0
-            for sprites in line:
-                x = spirtes_x * sprite_size
-                y = spirtes_y * sprite_size
-                if sprite == "x":
-                    screen.blit("wall_image", (x,y))
-                elif spirtes == "O"
-                    screen.blit("floor_image", (x, y))
-            spirtes_y = spirtes_y + 1
-        spirtes_x = spirtes_x + 1    
+        wall = pygame.image.load("images/wall.png").convert()
+        wall = pygame.transform.scale(wall, (sprite_size, sprite_size))
+        floor = pygame.image.load("images/floor.png").convert()
+        floor = pygame.transform.scale(floor, (sprite_size, sprite_size))
+        guard = pygame.image.load("images/Gardien.png").convert()
+        guard = pygame.transform.scale(guard, (sprite_size, sprite_size))
+
+        line_nb = 0
+        for line in self.structure:
+            case_nb = 0
+            for sprite in line:
+                x = case_nb * sprite_size
+                y = line_nb * sprite_size
+                if sprite == "X":
+                    screen.blit(wall, (x,y))
+                elif sprite == "O":
+                    screen.blit(floor, (x,y))
+                elif sprite == "G":
+                    screen.blit(guard, (x,y))    
+                case_nb = case_nb + 1
+            line_nb = line_nb + 1    
                     
         
                     
