@@ -28,18 +28,18 @@ class Maze:
 
     def display(self, screen):
 
-        wall = pygame.image.load("images/wall.png").convert()
+        wall = pygame.image.load("images/wall.png")
         wall = pygame.transform.scale(wall, (sprite_size, sprite_size))
-        floor = pygame.image.load("images/floor.png").convert()
+        floor = pygame.image.load("images/floor.png")
         floor = pygame.transform.scale(floor, (sprite_size, sprite_size))
-        guard = pygame.image.load("images/Gardien.png").convert()
+        guard = pygame.image.load("images/guard.png")
         guard = pygame.transform.scale(guard, (sprite_size, sprite_size))
 
         line_nb = 0
         for line in self.structure:
-            case_nb = 0
+            column_nb = 0
             for sprite in line:
-                x = case_nb * sprite_size
+                x = column_nb * sprite_size
                 y = line_nb * sprite_size
                 if sprite == "X":
                     screen.blit(wall, (x,y))
@@ -47,7 +47,7 @@ class Maze:
                     screen.blit(floor, (x,y))
                 elif sprite == "G":
                     screen.blit(guard, (x,y))    
-                case_nb = case_nb + 1
+                column_nb = column_nb + 1
             line_nb = line_nb + 1    
                     
         

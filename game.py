@@ -12,7 +12,7 @@ class Game:
 
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("The amazing MacGyver !" )
-        pygame.display.flip() 
+
         self.level = None
         self.macgyver_icon = None
         self.start()
@@ -24,7 +24,7 @@ class Game:
         self.level.generate()
         self.level.display(self.screen)
 
-        self.macgyver_icon = pygame.image.load("images/McGyver.png").convert()
+        self.macgyver_icon = pygame.image.load("images/McGyver.png")
         self.macgyver_icon = pygame.transform.scale(self.macgyver_icon, (sprite_size, sprite_size))
         self.macgyver = Char(self.level)
       
@@ -34,10 +34,10 @@ def main_loop():
 
     pygame.init()
     game = Game() 
-    game.start()        
+    game.start()
+
     running = True
     while running: 
-        pygame.display.update()
 
         for event in pygame.event.get():
 

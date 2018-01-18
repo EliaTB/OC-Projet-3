@@ -1,5 +1,3 @@
-import pygame
-from pygame.locals import *
 from maze import Maze
 from data import *
 
@@ -13,10 +11,10 @@ class Char:
         self.level = level
         self.item_count = 0
 
-#    @classmethod
-#    def calulate_x_and_y(cls):
-#    	self.x = self.position_x * sprite_size
-#    	self.y = self.position_y * sprite_size
+    # @property
+    # def calculate_x_and_y(self):
+    # 	self.x = self.position_x * sprite_size
+    # 	self.y = self.position_y * sprite_size
 
     def move_up(self):
 
