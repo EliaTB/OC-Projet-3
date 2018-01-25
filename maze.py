@@ -1,4 +1,3 @@
-import random 
 import pygame
 from pygame.locals import *
 from data import *
@@ -6,11 +5,12 @@ from data import *
 
 class Maze:
 
-    def __init__(self, level_file):
+    def __init__(self, level_file,):
         self.level_file = level_file
         self.structure = None
 
-        
+
+    
     def generate(self):
 
         with open(self.level_file) as level_file:
@@ -18,13 +18,28 @@ class Maze:
             for line in level_file:
                 line_level = []
                 for sprite in line:
-#                   if sprite == "O":
-#                       floor_available.append(i)
                     if sprite != "\n":
                         line_level.append(sprite)
-                structure_level.append(line_level)     
+
+                structure_level.append(line_level)
+
             self.structure = structure_level 
 
+
+    # def get_random_position(self):
+
+    #     pos_y = 0
+    #     pos_x = 0
+
+    #     while self.structure[pos_y][pos_x] != "O":
+    #         pos_x = random.randrange(0, (sprite_nb - 1))
+    #         pos_y = random.randrange(0, (sprite_nb - 1))
+    #     self.structure[pos_y][pos_x] = "I"
+    #     return pos_x, pos_y
+
+
+    def is_floor(self, pos_y, pos_x):
+        return (self.structure[pos_y][pos_x] != "X")
 
     def display(self, screen):
 
