@@ -14,4 +14,4 @@ The only external ibrary used is Pygame 1.9.3
 You can launch the game by using : `python game.py`
 
 ## How to Play :
-Use the arrow keys to move around and espace to exit the game.
+Use the arrow keys to move around and escape to exit the game.
