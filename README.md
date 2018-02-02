@@ -1,18 +1,15 @@
 # OC Projet 3: Aidez MacGyver à s'échapper !
 
-## Description du projet :
-Créer un labyrinthe codé en Python avec le module Pygame.
+## Description :
+A game made with Python and Pygame for the third project of the OC Python developper course.
 
-## But du jeu :
-MacGyver doit collecter tous les objets présents dans la mappe pour endormir le gardien qui surveille la sortie du labyrinthe.
+## Game's goal :
+MacGyver has to collect all the objects on the map to put to sleep the guard and escape from the maze.
 
-## Objectifs :
-- Les objets doivent apparaître de façon aléatoire dans le labyrinthe.
-- MacGyver sera contrôlé par les touches directionnelles du clavier.
-- La fenêtre du jeu sera un carré pouvant afficher 15 sprites sur la longueur.
-- Il récupèrera un objet simplement en se déplaçant dessus.
-- Le programme s'arrête uniquement si MacGyver a bien récupéré tous les objets et trouvé la sortie du labyrinthe. S'il n'a pas tous les    objets et qu'il se présente devant le garde, il meurt 
+## User installation:
+To install all of the required dependencies open the command prompt use pip : `pip install -r requirements.txt`
+The only external ibrary used is Pygame 1.9.3
+You can launch the game by using : `python game.py`
 
-## Condition requise :
-- Python 3.X
-- Pygame
+## How to Play :
+Use the arrow keys to move around and espace to exit the game.
