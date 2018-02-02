@@ -7,7 +7,7 @@ A game made with Python and Pygame for the third project of the OC Python develo
 MacGyver has to collect all the objects on the map to put to sleep the guard and escape from the maze.
 
 ## User installation:
-To install all of the required dependencies open the command prompt use pip : `pip install -r requirements.txt`
+To install all of the required dependencies open the command prompt and use pip : `pip install -r requirements.txt`
 
 The only external ibrary used is Pygame 1.9.3 
 
