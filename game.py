@@ -3,7 +3,7 @@ from pygame.locals import *
 from maze import Maze
 from char import Char
 from item import Item
-from data import *
+from constants import *
 
 
 

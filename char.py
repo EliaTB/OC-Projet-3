@@ -1,7 +1,7 @@
 import pygame
 from pygame.locals import *
 from maze import Maze
-from data import *
+from constants import *
 
 class Char:
     

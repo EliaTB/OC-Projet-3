@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-from data import *
+from constants import *
 
 
 class Maze:
