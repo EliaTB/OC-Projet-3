@@ -8,7 +8,9 @@ MacGyver has to collect all the objects on the map to put to sleep the guard and
 
 ## User installation:
 To install all of the required dependencies open the command prompt use pip : `pip install -r requirements.txt`
+
 The only external ibrary used is Pygame 1.9.3 
+
 You can launch the game by using : `python game.py`
 
 ## How to Play :
