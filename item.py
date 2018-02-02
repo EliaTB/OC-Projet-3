@@ -7,28 +7,28 @@ from data import *
 
 class Item:
 
-    def __init__(self, image, name, level):
-        self.item_id = name
+    def __init__(self, image, letter, level):
+        self.item_id = letter
         self.level = level
         self.draw = 1
-        self.position_x, self.position_y = self.random_position()
+        self.position_x, self.position_y = self.get_random_position()
         self.x = self.position_x * sprite_size
         self.y = self.position_y * sprite_size
-        self.sprite = pygame.image.load(image).convert_alpha()
+        self.sprite = pygame.image.load(image)
         self.sprite = pygame.transform.scale((self.sprite), (sprite_size, sprite_size))
 
-        
-    def random_position(self):
+    
 
-        self.position_y = 0
-        self.position_x = 0
+    def get_random_position(self):
 
-        while self.level.structure[self.position_y][self.position_x] != "O":
-            self.position_x = random.randrange(0, (sprite_nb - 1))
-            self.position_y = random.randrange(0, (sprite_nb - 1))
-        self.level.structure[self.position_y][self.position_x] = self.item_id
-        return self.position_x, self.position_y
+        pos_y = 0
+        pos_x = -1
 
+        while self.level.structure[pos_y][pos_x] != "O":
+            pos_x = random.randrange(0, (sprite_nb - 1))
+            pos_y = random.randrange(0, (sprite_nb - 1))
+        self.level.structure[pos_y][pos_x] = self.item_id
+        return pos_x, pos_y
 
 
     def display(self, screen):

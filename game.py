@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 from maze import Maze
 from char import Char
-from items import Item
+from item import Item
 from data import *
 
 
@@ -11,12 +11,13 @@ class Game:
 
     def __init__(self): 
 
+        pygame.font.init()
+
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption("The amazing MacGyver !")
 
-        self.level = None
-        # self.macgyver_icon = None
 
+        self.level = None
         self.level = Maze("level.txt")
         self.level.generate()
         self.level.display(self.screen)
@@ -36,6 +37,9 @@ class Game:
 
     def start(self):
 
+        win_img = pygame.image.load("images/win.png")
+        lose_img = pygame.image.load("images/lose.png")
+
         pygame.init()
          
         running = True
@@ -48,7 +52,7 @@ class Game:
                     pygame.quit()
 
                 if event.type == KEYDOWN:
-                    if event.key == pygame.K_ESCAPE:
+                    if event.key == K_ESCAPE:
                         running = False
                         pygame.quit()
 
@@ -73,13 +77,45 @@ class Game:
                 self.tube.remove_item()
                 self.macgyver.get_item()
 
-            # meet the guard
+            #meet the guard
             
-            # if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == "G" :
-            #     if self.macgyver.item_counter >= 3 :
-            #         win = 1
-            #     else :
-            #         lose = 1
+            if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == "G" :
+                if self.macgyver.item_counter >= 3 :
+                    win = True
+                    while win :
+                        self.screen.blit(win_img, (0, 0))
+                        for event in pygame.event.get():
+                            if event.type == QUIT: 
+                                running = False
+                                pygame.quit()
+
+                            if event.type == KEYDOWN:
+                                if event.key == K_ESCAPE:
+                                    running = False
+                                    pygame.quit()
+                                if event.key == K_RETURN :
+                                    win = False
+                                    Game ()
+                        pygame.display.flip()        
+
+                        
+                else :
+                    lose = 1
+                    while lose :
+                        self.screen.blit(lose_img, (0, 0))
+                        for event in pygame.event.get():
+                            if event.type == QUIT: 
+                                running = False
+                                pygame.quit()
+
+                            if event.type == KEYDOWN:
+                                if event.key == K_ESCAPE:
+                                    running = False
+                                    pygame.quit()
+                                if event.key == K_RETURN :
+                                    lose = False
+                                    Game ()
+                        pygame.display.flip()
 
 
             self.level.display(self.screen)

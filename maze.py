@@ -20,26 +20,9 @@ class Maze:
                 for sprite in line:
                     if sprite != "\n":
                         line_level.append(sprite)
-
                 structure_level.append(line_level)
-
             self.structure = structure_level 
 
-
-    # def get_random_position(self):
-
-    #     pos_y = 0
-    #     pos_x = 0
-
-    #     while self.structure[pos_y][pos_x] != "O":
-    #         pos_x = random.randrange(0, (sprite_nb - 1))
-    #         pos_y = random.randrange(0, (sprite_nb - 1))
-    #     self.structure[pos_y][pos_x] = "I"
-    #     return pos_x, pos_y
-
-
-    def is_floor(self, pos_y, pos_x):
-        return (self.structure[pos_y][pos_x] != "X")
 
     def display(self, screen):
 
@@ -61,7 +44,9 @@ class Maze:
                 elif sprite == "O":
                     screen.blit(floor, (x,y))
                 elif sprite == "G":
-                    screen.blit(guard, (x,y))    
+                    screen.blit(guard, (x,y))
+                elif sprite == "M" :
+                    screen.blit(floor, (x,y))        
                 column_nb = column_nb + 1
             line_nb = line_nb + 1    
                     
