@@ -10,7 +10,7 @@ class Maze:
         self.structure = None
 
 
-    
+
     def generate(self):
 
         with open(self.level_file) as level_file:
@@ -21,7 +21,7 @@ class Maze:
                     if sprite != "\n":
                         line_level.append(sprite)
                 structure_level.append(line_level)
-            self.structure = structure_level 
+            self.structure = structure_level
 
 
     def display(self, screen):
@@ -37,22 +37,15 @@ class Maze:
         for line in self.structure:
             column_nb = 0
             for sprite in line:
-                x = column_nb * sprite_size
-                y = line_nb * sprite_size
+                case_x = column_nb * sprite_size
+                case_y = line_nb * sprite_size
                 if sprite == "X":
-                    screen.blit(wall, (x,y))
+                    screen.blit(wall, (case_x, case_y))
                 elif sprite == "O":
-                    screen.blit(floor, (x,y))
+                    screen.blit(floor, (case_x, case_y))
                 elif sprite == "G":
-                    screen.blit(guard, (x,y))
-                elif sprite == "M" :
-                    screen.blit(floor, (x,y))        
+                    screen.blit(guard, (case_x, case_y))
+                elif sprite == "M":
+                    screen.blit(floor, (case_x, case_y))
                 column_nb = column_nb + 1
-            line_nb = line_nb + 1    
-                    
-        
-                    
-    
-            
-
-
+            line_nb = line_nb + 1

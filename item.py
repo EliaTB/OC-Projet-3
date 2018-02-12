@@ -17,7 +17,6 @@ class Item:
         self.sprite = pygame.image.load(image)
         self.sprite = pygame.transform.scale((self.sprite), (sprite_size, sprite_size))
 
-    
 
     def get_random_position(self):
 
@@ -32,13 +31,11 @@ class Item:
 
 
     def display(self, screen):
- 
+
         if self.draw == 1:
             screen.blit(self.sprite, (self.x, self.y))
 
-    
+
     def remove_item(self):
         self.draw -= 1
         self.level.structure[self.position_y][self.position_x] = "O"
-
-   

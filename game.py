@@ -9,7 +9,7 @@ from constants import *
 
 class Game:
 
-    def __init__(self): 
+    def __init__(self):
 
         pygame.font.init()
 
@@ -33,7 +33,6 @@ class Game:
         self.tube.display(self.screen)
 
         self.start()
-      
 
     def start(self):
 
@@ -41,13 +40,13 @@ class Game:
         lose_img = pygame.image.load("images/lose.png")
 
         pygame.init()
-         
+
         running = True
-        while running: 
+        while running:
 
             for event in pygame.event.get():
 
-                if event.type == QUIT: 
+                if event.type == QUIT:
                     running = False
                     pygame.quit()
 
@@ -61,14 +60,14 @@ class Game:
                     elif event.key == K_DOWN:
                         self.macgyver.move_down()
                     elif event.key == K_RIGHT:
-                        self.macgyver.move_right()       
+                        self.macgyver.move_right()
                     elif event.key == K_LEFT:
                         self.macgyver.move_left()
 
             if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == self.needle.item_id:
                 self.needle.remove_item()
                 self.macgyver.get_item()
-                
+
             if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == self.ether.item_id:
                 self.ether.remove_item()
                 self.macgyver.get_item()
@@ -78,14 +77,14 @@ class Game:
                 self.macgyver.get_item()
 
             #meet the guard
-            
-            if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == "G" :
-                if self.macgyver.item_counter >= 3 :
+
+            if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == "G":
+                if self.macgyver.item_counter >= 3:
                     win = True
-                    while win :
+                    while win:
                         self.screen.blit(win_img, (0, 0))
                         for event in pygame.event.get():
-                            if event.type == QUIT: 
+                            if event.type == QUIT:
                                 running = False
                                 pygame.quit()
 
@@ -93,18 +92,18 @@ class Game:
                                 if event.key == K_ESCAPE:
                                     running = False
                                     pygame.quit()
-                                if event.key == K_RETURN :
+                                if event.key == K_RETURN:
                                     win = False
-                                    Game ()
-                        pygame.display.flip()        
+                                    Game()
+                        pygame.display.flip()
 
-                        
-                else :
+
+                else:
                     lose = 1
-                    while lose :
+                    while lose:
                         self.screen.blit(lose_img, (0, 0))
                         for event in pygame.event.get():
-                            if event.type == QUIT: 
+                            if event.type == QUIT:
                                 running = False
                                 pygame.quit()
 
@@ -112,15 +111,14 @@ class Game:
                                 if event.key == K_ESCAPE:
                                     running = False
                                     pygame.quit()
-                                if event.key == K_RETURN :
+                                if event.key == K_RETURN:
                                     lose = False
-                                    Game ()
+                                    Game()
                         pygame.display.flip()
 
 
             self.level.display(self.screen)
-            self.screen.blit(self.macgyver.sprite, (self.macgyver.x, self.macgyver.y))       
+            self.screen.blit(self.macgyver.sprite, (self.macgyver.x, self.macgyver.y))
             pygame.display.flip()
 
-Game() 
-
+Game()
