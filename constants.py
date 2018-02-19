@@ -1,3 +1,4 @@
+"""constants of the game"""
 sprite_nb = 15
 sprite_size = 50
 

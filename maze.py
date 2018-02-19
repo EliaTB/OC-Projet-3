@@ -1,18 +1,20 @@
+"""Defines maze class"""
+
 import pygame
 from pygame.locals import *
 from constants import *
 
 
 class Maze:
-
-    def __init__(self, level_file,):
+    """class to create the structure"""
+    def __init__(self, level_file):
         self.level_file = level_file
         self.structure = None
 
 
 
     def generate(self):
-
+        """method to generate the maze from a file"""
         with open(self.level_file) as level_file:
             structure_level = []
             for line in level_file:
@@ -25,7 +27,7 @@ class Maze:
 
 
     def display(self, screen):
-
+        """method to display the maze from the generation"""
         wall = pygame.image.load("images/wall.png")
         wall = pygame.transform.scale(wall, (sprite_size, sprite_size))
         floor = pygame.image.load("images/floor.png")

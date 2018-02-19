@@ -1,3 +1,5 @@
+"""defines game class"""
+
 import pygame
 from pygame.locals import *
 from maze import Maze
@@ -41,6 +43,7 @@ class Game:
 
         pygame.init()
 
+        #game loop
         running = True
         while running:
 
@@ -64,6 +67,7 @@ class Game:
                     elif event.key == K_LEFT:
                         self.macgyver.move_left()
 
+            #item management  
             if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == self.needle.item_id:
                 self.needle.remove_item()
                 self.macgyver.get_item()
@@ -76,8 +80,7 @@ class Game:
                 self.tube.remove_item()
                 self.macgyver.get_item()
 
-            #meet the guard
-
+            #interactions with the guard
             if self.level.structure[self.macgyver.position_y][self.macgyver.position_x] == "G":
                 if self.macgyver.item_counter >= 3:
                     win = True
@@ -118,7 +121,8 @@ class Game:
 
 
             self.level.display(self.screen)
-            self.screen.blit(self.macgyver.sprite, (self.macgyver.x, self.macgyver.y))
+            #display the character
+            self.screen.blit(self.macgyver.sprite, (self.macgyver.case_x, self.macgyver.case_y))
             pygame.display.flip()
 
 Game()
